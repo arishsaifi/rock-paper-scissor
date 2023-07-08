@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="score">
+            <h2 class="game-heading">ROCK PAPER SCISSORS</H2>
+            <div class="score-right" style="font-weight: 800;">
+                <div>
+                    <h3>Player:</h3>
+                    <span id="player-score" style="font-size: xx-large ; text-align: center;">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <h3>Computer:</h3>
+                    <span id="computer-score" style="font-size: xx-large ; text-align: center;">
+                       0
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="message">Choose an option:</div> -->
+       
+        <div id="foot">
+            <div class="options" >
+               <div class="options-1">
+                <div class="option" onclick="chooseOption('rock')">
+                    <img src="images/rock.png" alt="Rock">
+                </div>
+                <div class="option" onclick="chooseOption('scissors')">
+                    <img src="images/scissor.png">
+                </div>
+               </div>
+               <div class="options-2">
+                <div class="option" onclick="chooseOption('paper')">
+                    <img src="images/paper.png" alt="">
+                </div>
+               </div>
+               <div class="rules">
+                <button  class="mybtn" onclick="openPopup()">
+                    RULES
+                </button>
+            </div>
+
+
+            </div>
+            <div class="result-message" id="result-message" style="text-align: center; color: black;"></div>
+
+        </div>
+        <!-- <a href="index.html"><button class="play-again" onclick="playAgain()">Play Again</button></a> -->
+    </div>
+    <div>
+        <div class="popup" id="popup">
+            
+                <div class="cross"><button class="button" onclick="closePopup()" id="ok">X</button></div>
+               <div class="popup-1">
+                <div class="header">
+                    <h1>Game rules</h1>
+                </div>
+                <div class="message">
+                    <ul>
+                        <li>Rock beats scissors,scissorsbeat paperand paper beats rock.</li>
+                        <li>Agree ahead of time whether you'll count off"rock,paper,scissor,shoot" or just "rock,paper,scissors.</li>
+                        <li>Use rock,paper,scissorto settle minor dicisions or simply play to pass the time.</li>
+                        <li>If both players lay down the same hand,each lays down another hand.</li>
+                    </ul>
+                </div>
+               </div>
+           
+        </div>
+        
+    
+    </div>
+    <!-- external contents   -->
+    <div id="won">
+        <div class="won-1">
+            <img src="images/scissor.png" alt="" srcset="">
+            <div class="won-content">
+                <h2>YOU WIN</h2>
+                <h4>AGAINST PC</h4>
+               <a href="index.html"> <button class="mybtn" onclick="playAgain()" >
+                PLAY AGAIN
+            </button></a>
+            </div>
+            <img src="images/paper.png" alt="" srcset="">
+        </div>
+        <div class="next" >
+            <button  class="mybtn" onclick="openPopup()">
+                RULES
+            </button>
+            <a href="win.html"><button class="mybtn">NEXT</button></a>
+           
+        </div>
+    </div>
+    <div id="loss">
+        <div class="won-1">
+            <img src="images/paper.png" alt="" srcset="">
+            <div class="won-content">
+                <h2>YOU LOST</h2>
+                <h4>AGAINST PC</h4>
+               <a href="index.html"> <button class="mybtn" onclick="playAgain()" >
+                PLAY AGAIN
+            </button></a>
+            </div>
+            <img src="images/scissor.png" alt="" srcset="">
+        </div>
+        <div class="next-1" >
+            <button  class="mybtn" onclick="openPopup()">
+                RULES
+            </button>
+            <!-- <a href="win.html"><button class="mybtn">NEXT</button></a> -->
+           
+        </div>
+    </div>
+    <div id="tie">
+        <div class="won-1">
+            <img src="images/rock.png" alt="" srcset="">
+            <div class="won-content">
+                <h2>TIE UP</h2>
+               <a href="index.html"> <button class="mybtn" onclick="playAgain()" >
+                PLAY AGAIN
+            </button></a>
+            </div>
+            <img src="images/rock.png" alt="" srcset="">
+        </div>
+        <div class="next-1" >
+            <button  class="mybtn" onclick="openPopup()">
+                RULES
+            </button>
+            <!-- <a href="win.html"><button class="mybtn">NEXT</button></a> -->
+           
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

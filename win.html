@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #8CC461;
+            align-items: center;
+        }
+
+        .img {
+            text-align: center;
+        }
+
+        .btn1 {
+            margin-top: 3vh;
+            text-align: center;
+        }
+
+        .rules {
+            float: right;
+            margin: 10vh 1vh 0vh 0vh;
+        } 
+
+         .btn {
+            text-align: center;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+            color: black;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 11px 23px;
+            text-decoration: none;
+            text-shadow: 0px -1px 0px #2f6627;
+        }
+
+        .header {
+            margin-left: 10px;
+        }
+
+        .button {
+            background-color: red;
+            border: 5px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: azure;
+            margin-top: -6%;
+            margin-right: -6%;
+        }
+
+        .popup {
+            width: 45vh;
+            background-color: green;
+            /* margin: 10em 0 0 60em   ; */
+            position: absolute;
+            top: 00em;
+            left: 60em;
+            transform: scale(0.1);
+            padding: 10px;
+            border-radius: 10%;
+            border: 5px solid white;
+            visibility: hidden;
+            transition: transform 0.5s, top 0.4s;
+        }
+
+        .open-popup {
+            visibility: visible;
+            top: 10em;
+            transform: scale(1);
+        }
+
+        .popup button {
+            float: right;
+        }
+
+        .message ul {
+            list-style-type: square green;
+        }
+
+        .rules {
+            top: 30em;
+            left: 70em;
+            position: absolute;
+
+        }
+    </style>
+    <title>You are winner</title>
+</head>
+
+<body>
+
+    <div class="img">
+        <img src="images/win.png" alt="you have won" srcset="">
+    </div>
+    <div class="btn1">
+       <a href="/index.html">
+        <button class="btn" onclick="playAgain()">
+            <p style="color: black;"> PLAY AGAIN</p>
+    </button>
+       </a>
+    </div>
+   <div>
+    <div class="popup" id="popup">
+            
+        <div class="cross"><button class="button" onclick="closePopup()" id="ok">X</button></div>
+       <div class="popup-1">
+        <div class="header">
+            <h1>Game rules</h1>
+        </div>
+        <div class="message">
+            <ul>
+                <li>Rock beats scissors,scissorsbeat paperand paper beats rock.</li>
+                <li>Agree ahead of time whether you'll count off"rock,paper,scissor,shoot" or just "rock,paper,scissors.</li>
+                <li>Use rock,paper,scissorto settle minor dicisions or simply play to pass the time.</li>
+                <li>If both players lay down the same hand,each lays down another hand.</li>
+            </ul>
+        </div>
+       </div>
+   
+</div>
+
+    </div>
+    <div class="rules">
+        <button class="btn" onclick="openPopup()">
+            RULES
+        </button>
+    </div>
+   </div>
+   <script src="script.js"></script>
+    <script>
+        let popup = document.getElementById("popup")
+        function openPopup() {
+            popup.classList.add("open-popup")
+        }
+        function closePopup() {
+            popup.classList.remove("open-popup")
+        }
+    </script>
+
+
+</body>
+
+</html>
